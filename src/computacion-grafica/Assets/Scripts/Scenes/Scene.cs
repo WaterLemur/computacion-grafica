@@ -12,7 +12,7 @@ public abstract class Scene : MonoBehaviour
         Text sceneInfo = GameObject.Find("SceneInfo").GetComponent<Text>();
         sceneInfo.text = SceneManager.GetActiveScene().name;
         
-        if (!string.IsNullOrEmpty(info))
+        if (string.IsNullOrEmpty(info))
             sceneInfo.text = sceneInfo.text + " - " + info;
     }
 
